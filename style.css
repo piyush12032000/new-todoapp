@@ -195,16 +195,17 @@ body {
       border-radius: 50%;
       border: none;
       position: absolute;
-      left: 636px;
+      left: 531px;
       top: 53px;
+     
     }
     .items {
       color: white;
       margin-left: 10px;
       font-size: 35px;
-      position: absolute;
-      top: 43px;
-      right: -515px;
+      position: relative;
+      top: -58px;
+      right: -435px;
     }
     #popup2 {
       width: 59%;
