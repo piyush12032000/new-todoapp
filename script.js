@@ -9,6 +9,7 @@ card.innerHTML = ` <div class="card1" id="box1">
 <input type="text" class="inp"  id="inputtext"/> <span  id="99">
 <button id="b98" onclick= 'addbranch()'>Add</button> <button id="b97" onclick="cloceme()">Close</button> </span>
 </div> `;
+let isBlur = false;
 
 function callme() {
   body.appendChild(card);
@@ -17,6 +18,10 @@ function callme() {
   backButton.style.display = "none";
   adtsk.style.opacity = "0.5";
   plusbtn.style.opacity = "0.5";
+  document.getElementById("card-container");
+  // if (!isBlur) {
+  //   cardContainer.classList.add("blur");
+  //   isBlur = true;
 }
 function cloceme() {
   card.style.display = "none";
@@ -78,11 +83,10 @@ function arraydata() {
     </h2>
      <hr> 
      <ul id = "content-list-${data[i].id}">
-     
      </ul>
 
     <div class ="end2btn"> 
-    <button onclick="DeleteCard(${data[i].id})">delete</button> 
+    <button onclick="DeleteCard (${data[i].id})">delete</button> 
     <button onclick="showAddContentPopup(${data[i].id})">Add</button></div></div>`;
   }
 
