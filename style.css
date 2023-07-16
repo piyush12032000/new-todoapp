@@ -170,13 +170,18 @@ body {
     border-radius: 12px;
   }
   
-  @media (min-width: 300px) and (max-width: 600px) {
+  @media  (max-width: 550px) {
     .b1 {
       float: right;
-      margin-right: 50px;
+      margin-right: 421px;
       margin-top: 100px;
       width: 200px;
       height: 200px;
+    }
+    #head{
+        position: relative;
+        top: 50px;
+        left: 50px;
     }
     .card1 {
       width: 80%;
@@ -185,8 +190,8 @@ body {
       border-radius: 5%;
       border: blue solid 5px;
       position: absolute;
-      top: 321px;
-      left: 249px;
+      top: 193px;
+    left: 34px;
     }
     .plus {
       background-color: blue;
@@ -195,17 +200,17 @@ body {
       border-radius: 50%;
       border: none;
       position: absolute;
-      left: 531px;
-      top: 53px;
+      left: 97px;
+    top: 111px;
      
     }
     .items {
       color: white;
-      margin-left: 10px;
+      
       font-size: 35px;
       position: relative;
-      top: -58px;
-      right: -435px;
+      top: -43px;
+    left: 375px;
     }
     #popup2 {
       width: 59%;
@@ -214,8 +219,8 @@ body {
       border-radius: 5%;
       text-align: center;
       position: absolute;
-      top: 405px;
-      left: 292px;
+      top: 198px;
+      left: 58px;
       z-index: 1;
       display: none;
     }
@@ -243,8 +248,8 @@ body {
       font-weight: 600;
       text-align: center;
       position: absolute;
-      left: 333px;
-      top: 87px;
+      left: 64px;
+      top: 117px;
     }
 
     #card-container {
@@ -256,8 +261,8 @@ body {
       align-content: center;
       align-items: flex-start;
       position: relative;
-      left: 216px;
-      top: -110px;
+      left: -13px;
+    top: -155px;
   }
   .end2btn {
     display: flex;
@@ -270,5 +275,12 @@ body {
     left: 14px;
     top: 22px;;
   }
+  #back {
+    display: none;
+    position: relative;
+    width: 216px;
+    top: -268px;
+    left: 60px;
   }
+}
   
