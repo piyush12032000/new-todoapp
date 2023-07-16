@@ -3,6 +3,9 @@ let body = document.querySelector("body");
 let card = document.createElement("div");
 let adtsk = document.getElementById("head");
 let plusbtn = document.getElementById("addbtn1");
+let container = document.getElementById("card-container")
+
+
 
 card.innerHTML = ` <div class="card1" id="box1">
 <span class="c1">Add New List</span>
@@ -12,18 +15,24 @@ card.innerHTML = ` <div class="card1" id="box1">
 let isBlur = false;
 
 function callme() {
+    plusbtn.style.filter = 'blur(6px)';
+    adtsk .style.filter = 'blur(6px)';
+    container.style.filter = 'blur(6px)';
   body.appendChild(card);
   card.style.display = "block";
   const backButton = document.querySelector("#back");
   backButton.style.display = "none";
-  adtsk.style.opacity = "0.5";
-  plusbtn.style.opacity = "0.5";
+//   adtsk.style.opacity = "0.5";
+//   plusbtn.style.opacity = "0.5";
   document.getElementById("card-container");
   // if (!isBlur) {
   //   cardContainer.classList.add("blur");
   //   isBlur = true;
 }
 function cloceme() {
+    plusbtn.style.filter = 'blur(0px)';
+    adtsk .style.filter = 'blur(0px)';
+    container.style.filter = 'blur(0px)';
   card.style.display = "none";
   let c1 = document.getElementById("popup2");
   c1.style.display = "none";
@@ -33,6 +42,9 @@ let data = [];
 let cardId;
 
 function addbranch() {
+    plusbtn.style.filter = 'blur(6px)';
+    adtsk .style.filter = 'blur(6px)';
+    container.style.filter = 'blur(0px)';
   let inputtext = document.getElementById("inputtext").value;
   let item = {
     id: new Date().getTime(),
