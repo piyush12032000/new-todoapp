@@ -22,12 +22,8 @@ function callme() {
   card.style.display = "block";
   const backButton = document.querySelector("#back");
   backButton.style.display = "none";
-//   adtsk.style.opacity = "0.5";
-//   plusbtn.style.opacity = "0.5";
-  document.getElementById("card-container");
-  // if (!isBlur) {
-  //   cardContainer.classList.add("blur");
-  //   isBlur = true;
+
+  document.getElementById("card-container");;
 }
 function cloceme() {
     plusbtn.style.filter = 'blur(0px)';
@@ -56,10 +52,9 @@ function addbranch() {
   if (inputtext) {
     data.push(item);
     arraydata();
-    // console.log(item);
-    // console.log(data);
+    
   } else {
-    alert(" Please Add Titel ");
+    alert(" Please Add Task ");
   }
   document.getElementById("inputtext").value = "";
   cloceme();
@@ -86,7 +81,7 @@ function arraydata() {
   const cardcontainer = document.querySelector("#card-container");
   let child = "";
   for (let i = 0; i < data.length; i++) {
-    // console.log("data[i]:", data[i]);
+   // console.log("data[i]:", data[i]);
     // console.log(data[i].title);
     child += `<div class="branchcard" id ='${data[i].id}'
     > 
@@ -98,7 +93,7 @@ function arraydata() {
      </ul>
 
     <div class ="end2btn"> 
-    <button onclick="DeleteCard (${data[i].id})">delete</button> 
+    <button onclick="DeleteCard (${data[i].id})">Del</button> 
     <button onclick="showAddContentPopup(${data[i].id})">Add</button></div></div>`;
   }
 
@@ -124,7 +119,9 @@ function showAddContentPopup(id) {
   const popup2 = document.getElementById("popup2");
   popup2.style.display = "flex";
   cardId = id;
-  // console.log(cardId);
+  plusbtn.style.filter = 'blur(6px)';
+  adtsk.style.filter = 'blur(6px)';
+  container.style.filter = 'blur(6px)';
 }
 
 function AddContentToCard() {
