@@ -4,7 +4,7 @@ let card = document.createElement("div");
 let adtsk = document.getElementById("head");
 let plusbtn = document.getElementById("addbtn1");
 let container = document.getElementById("card-container")
-
+let backbtn =document.getElementById("back")
 
 
 card.innerHTML = ` <div class="card1" id="box1">
@@ -32,6 +32,7 @@ function cloceme() {
   card.style.display = "none";
   let c1 = document.getElementById("popup2");
   c1.style.display = "none";
+  backbtn.style.filter ='blur(0px)'
 }
 
 let data = [];
@@ -93,8 +94,8 @@ function arraydata() {
      </ul>
 
     <div class ="end2btn"> 
-    <button onclick="DeleteCard (${data[i].id})">Del</button> 
-    <button onclick="showAddContentPopup(${data[i].id})">Add</button></div></div>`;
+    <button onclick="DeleteCard (${data[i].id})">❌</button> 
+    <button onclick="showAddContentPopup(${data[i].id})">✏️</button></div></div>`;
   }
 
   cardcontainer.innerHTML = child;
@@ -122,6 +123,9 @@ function showAddContentPopup(id) {
   plusbtn.style.filter = 'blur(6px)';
   adtsk.style.filter = 'blur(6px)';
   container.style.filter = 'blur(6px)';
+  backbtn.style.filter = 'blur(6px)';
+  
+  
 }
 
 function AddContentToCard() {
